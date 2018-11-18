@@ -9,12 +9,12 @@
 
 setwd("./")
 
-source("../Utility/utility.R")
+source("./utility.R")
 
 environmentSettings()
 
-source("../Utility/EfficientFrontier.R")
-source("../Utility/EfficientFrontierPlot.R")
+source("./Frontiera Efficiente/EfficientFrontier.R")
+source("./EfficientFrontierPlot.R")
 
 print(paste("Default UI working directory:",getwd()))
 
@@ -83,7 +83,7 @@ body <- dashboardBody(
       fluidRow(titlePanel("Harry Markovitz"),
                 selectInput("HarryMarkovitz", "", choices = list("Select", "Harry Markowitz Wiki Ita", "Harry Markowitz Wiki Eng", "Portfolio Selection: Efficient Diversification of Investments")),
                 mainPanel(
-                  uiOutput("img1")
+                  imageOutput("img1")
                 )
           )
         ),

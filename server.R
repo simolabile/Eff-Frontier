@@ -57,12 +57,11 @@ function(input, output, session) {
     
   })
   
-  output$img1 <- renderUI({
+  output$img1 <- renderImage({
     if(input$HarryMarkovitz == "Harry Markowitz Wiki Ita"){
-      img(height = 240, widht = 300, src = "wikiita.jpg")
-    }
+      list(src="./wikiita.JPG")
+      }
   })
-  
 }
 
 
