@@ -26,6 +26,7 @@ function(input, output, session) {
           title = "Tickers", status = "primary", solidHeader = TRUE,
           lapply(1:input$input_slider_tickerNumber, function(i)
           {
+            titleNumbers <<- i
             textInput(paste("tInput",i), paste("Ticker", i,"Name"),"")
             # fluidRow(
             #   column(width = 10,offset = 1, wellPanel(
@@ -62,9 +63,17 @@ function(input, output, session) {
       list(src="./wikiita.JPG")
       }
   })
+  
+  CalcoloTitles <- reactive({
+    if(input$button_calculate)
+    {print(titleNumbers)
+      
+    } 
+  })
+  
 }
 
-
+ 
   
   
   

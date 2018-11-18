@@ -55,7 +55,8 @@ body <- dashboardBody(
                        ),
           numericInput("Min", "Minimum Constraint", 0.00, min = 0.00, max = 0.50, step = 0.01),
           numericInput("Max", "Maximum Constraint", 0.00, min = 0.00, max = 0.50, step = 0.01)
-          )
+          ),
+        actionButton("button_calculate", "Calcola")
         )
       ),
     tabItem(
